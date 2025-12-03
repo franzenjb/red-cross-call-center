@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Hot Spots - Red Cross Call Center</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .nav-bar {
+            background: #dc3545;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stat-card h3 {
+            color: #dc3545;
+            font-size: 2em;
+        }
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            color: #dc3545;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 10px;
+        }
+        .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        ol {
+            list-style-position: inside;
+            color: #666;
+        }
+        li {
+            margin: 8px 0;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">🚨 Red Cross Call Center</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="region_map.html">Regions</a>
+                <a href="hurricane_map.html">Hurricanes</a>
+                <a href="fire_map.html">Fires</a>
+                <a href="top_counties.html" class="active">Hot Spots</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Disaster Hot Spots</h1>
+            <p>Top 100 Counties by Emergency Response Activity</p>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3>100</h3>
+                <p>Top Counties</p>
+            </div>
+            <div class="stat-card">
+                <h3>9,754</h3>
+                <p>Highest Count</p>
+            </div>
+            <div class="stat-card">
+                <h3>1227</h3>
+                <p>100th County</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>📊 Top 100 Disaster-Prone Counties (2023-2025)</h2>
+            <p style="margin-bottom: 20px;">These counties represent the highest concentration of disaster response calls,
+            requiring immediate attention and resources.</p>
+
+            <div class="counties-grid">
+                <div>
+                    <h3 style="color: #dc3545; margin-bottom: 15px;">Counties 1-50</h3>
+                    <ol>
+                        <li>Wayne County: <strong>9,754 events</strong></li><li>Cook County: <strong>9,585 events</strong></li><li>Jefferson County: <strong>8,000 events</strong></li><li>Harris County: <strong>6,643 events</strong></li><li>Montgomery County: <strong>5,655 events</strong></li><li>Maricopa County: <strong>5,196 events</strong></li><li>Marion County: <strong>5,123 events</strong></li><li>Jackson County: <strong>5,024 events</strong></li><li>Los Angeles County: <strong>4,972 events</strong></li><li>Franklin County: <strong>4,547 events</strong></li><li>Washington County: <strong>4,538 events</strong></li><li>Philadelphia County: <strong>4,440 events</strong></li><li>Clark County: <strong>4,228 events</strong></li><li>San Diego County: <strong>4,214 events</strong></li><li>Orange County: <strong>4,133 events</strong></li><li>Kings County: <strong>3,938 events</strong></li><li>Shelby County: <strong>3,937 events</strong></li><li>Fulton County: <strong>3,720 events</strong></li><li>Cuyahoga County: <strong>3,415 events</strong></li><li>Monroe County: <strong>3,400 events</strong></li><li>Dallas County: <strong>3,320 events</strong></li><li>Queens County: <strong>3,144 events</strong></li><li>Bronx County: <strong>3,117 events</strong></li><li>Madison County: <strong>2,871 events</strong></li><li>Hamilton County: <strong>2,782 events</strong></li><li>Pulaski County: <strong>2,765 events</strong></li><li>King County: <strong>2,675 events</strong></li><li>Polk County: <strong>2,612 events</strong></li><li>Lake County: <strong>2,607 events</strong></li><li>Essex County: <strong>2,544 events</strong></li><li>Alameda County: <strong>2,521 events</strong></li><li>Erie County: <strong>2,487 events</strong></li><li>Baltimore City: <strong>2,386 events</strong></li><li>Milwaukee County: <strong>2,381 events</strong></li><li>Cumberland County: <strong>2,273 events</strong></li><li>Douglas County: <strong>2,273 events</strong></li><li>Multnomah County: <strong>2,272 events</strong></li><li>San Bernardino County: <strong>2,232 events</strong></li><li>DeKalb County: <strong>2,184 events</strong></li><li>Suffolk County: <strong>2,141 events</strong></li><li>Allegheny County: <strong>2,140 events</strong></li><li>Bexar County: <strong>2,124 events</strong></li><li>Riverside County: <strong>2,066 events</strong></li><li>Middlesex County: <strong>2,008 events</strong></li><li>Duval County: <strong>1,948 events</strong></li><li>Hillsborough County: <strong>1,944 events</strong></li><li>Hinds County: <strong>1,922 events</strong></li><li>Fairfield County: <strong>1,893 events</strong></li><li>Delaware County: <strong>1,868 events</strong></li><li>Broward County: <strong>1,862 events</strong></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 style="color: #dc3545; margin-bottom: 15px;">Counties 51-100</h3>
+                    <ol start="51">
+                        <li>Sacramento County: <strong>1,835 events</strong></li><li>Pima County: <strong>1,821 events</strong></li><li>Greene County: <strong>1,791 events</strong></li><li>Miami-Dade County: <strong>1,786 events</strong></li><li>District of Columbia: <strong>1,779 events</strong></li><li>St. Louis County: <strong>1,776 events</strong></li><li>Tarrant County: <strong>1,760 events</strong></li><li>Lee County: <strong>1,754 events</strong></li><li>New York County: <strong>1,696 events</strong></li><li>Union County: <strong>1,692 events</strong></li><li>Richmond County: <strong>1,651 events</strong></li><li>St. Clair County: <strong>1,635 events</strong></li><li>Oklahoma County: <strong>1,629 events</strong></li><li>Mecklenburg County: <strong>1,604 events</strong></li><li>Lucas County: <strong>1,575 events</strong></li><li>Leon County: <strong>1,560 events</strong></li><li>Scott County: <strong>1,540 events</strong></li><li>Genesee County: <strong>1,529 events</strong></li><li>New Haven County: <strong>1,518 events</strong></li><li>Clay County: <strong>1,513 events</strong></li><li>Lincoln County: <strong>1,507 events</strong></li><li>Fayette County: <strong>1,507 events</strong></li><li>York County: <strong>1,506 events</strong></li><li>Hartford County: <strong>1,505 events</strong></li><li>Summit County: <strong>1,489 events</strong></li><li>Mobile County: <strong>1,464 events</strong></li><li>Pierce County: <strong>1,464 events</strong></li><li>Snohomish County: <strong>1,461 events</strong></li><li>Butler County: <strong>1,440 events</strong></li><li>Hennepin County: <strong>1,440 events</strong></li><li>East Baton Rouge Parish: <strong>1,404 events</strong></li><li>Warren County: <strong>1,385 events</strong></li><li>Tulsa County: <strong>1,368 events</strong></li><li>Lawrence County: <strong>1,367 events</strong></li><li>Davidson County: <strong>1,361 events</strong></li><li>Richland County: <strong>1,356 events</strong></li><li>Kern County: <strong>1,340 events</strong></li><li>Benton County: <strong>1,339 events</strong></li><li>Johnson County: <strong>1,333 events</strong></li><li>San Francisco County: <strong>1,326 events</strong></li><li>Adams County: <strong>1,309 events</strong></li><li>Caddo Parish: <strong>1,292 events</strong></li><li>Prince George's County: <strong>1,267 events</strong></li><li>Escambia County: <strong>1,263 events</strong></li><li>Providence County: <strong>1,263 events</strong></li><li>Onondaga County: <strong>1,254 events</strong></li><li>Spokane County: <strong>1,254 events</strong></li><li>Kent County: <strong>1,247 events</strong></li><li>Knox County: <strong>1,239 events</strong></li><li>Carroll County: <strong>1,227 events</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
