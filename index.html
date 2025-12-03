@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Cross Disaster Response Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #dc3545;
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            color: #666;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stat-card h3 {
+            color: #dc3545;
+            font-size: 2em;
+            margin: 0;
+        }
+        .stat-card p {
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+        .maps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .map-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .map-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .map-card-content {
+            padding: 20px;
+        }
+        .map-card h3 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        .map-card p {
+            color: #666;
+            margin: 0 0 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c82333;
+        }
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .info-section h2 {
+            color: #dc3545;
+            margin-top: 0;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 Red Cross Disaster Response Dashboard</h1>
+            <p>Tracking 544,764 disaster events from 2023-2025</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>544,764</h3>
+                <p>Total Events</p>
+            </div>
+            <div class="stat-card">
+                <h3>55</h3>
+                <p>Active Regions</p>
+            </div>
+            <div class="stat-card">
+                <h3>245</h3>
+                <p>Active Chapters</p>
+            </div>
+            <div class="stat-card">
+                <h3>1,958</h3>
+                <p>Hurricane Events</p>
+            </div>
+        </div>
+
+        <div class="maps">
+            <div class="map-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23dc3545'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.3em'%3ERegion Map%3C/text%3E%3C/svg%3E" alt="Region Map">
+                <div class="map-card-content">
+                    <h3>Disasters by Region</h3>
+                    <p>View disaster events aggregated by Red Cross administrative regions across the United States.</p>
+                    <a href="region_map.html" class="btn">View Map →</a>
+                </div>
+            </div>
+
+            <div class="map-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%230066cc'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.3em'%3EHurricane Map%3C/text%3E%3C/svg%3E" alt="Hurricane Map">
+                <div class="map-card-content">
+                    <h3>Hurricane Impact</h3>
+                    <p>Track hurricane and tropical storm responses, including recent major events.</p>
+                    <a href="hurricane_map.html" class="btn">View Map →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>📊 Top Active Regions</h2>
+            <ul>
+                <li>Alabama and Mississippi Region: 33,622 events</li><li>Missouri and Arkansas Region: 29,233 events</li><li>Georgia Region: 25,574 events</li><li>Illinois Region: 20,330 events</li><li>Michigan Region: 19,527 events</li><li>North Carolina Region: 19,372 events</li><li>Tennessee Region: 16,215 events</li><li>Texas Gulf Coast Region: 15,488 events</li><li>Indiana Region: 15,133 events</li><li>Greater Pennsylvania Region: 14,948 events</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>📍 About This Dashboard</h2>
+            <p>This dashboard visualizes Red Cross disaster response data from their call center operations.
+            The data includes 544,764 events from 2023-2025, showing where disaster response
+            resources are most needed across the United States.</p>
+
+            <p><strong>Data Source:</strong> Red Cross EventLog system<br>
+            <strong>Update Frequency:</strong> Real-time event tracking<br>
+            <strong>Coverage:</strong> Continental United States</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Red Cross Disaster Response Analysis | Data current as of December 2025</p>
+        </div>
+    </div>
+</body>
+</html>
